@@ -60,7 +60,7 @@ h2[id]{scroll-margin-top:12px}
 </style></head><body>
 <h1>SENTINEL</h1>
 <p class="dim">proposes; never places a live order</p>
-<p class="dim">prices: Yahoo Finance (yfinance), cross-checked vs Finnhub · scanned 31 Oct 01:44 Asia/Jerusalem (<span data-sentinel-age>6 hours ago</span>)</p>
+<p class="dim">prices: Yahoo Finance (yfinance), cross-checked vs Finnhub · scanned 31 Oct 23:06 Asia/Jerusalem (<span data-sentinel-age>9 hours ago</span>)</p>
 <div class="nav"><a class="navbtn" href="/">&#8592; back</a></div>
 <h2>News false-positive review</h2><p>Each logged false positive is re-screened through the CURRENT rules: <b style='color:#bf616a'>OPEN</b> means the rules still misfire on it; <b style='color:#a3be8c'>resolved</b> means they've caught up (e.g. the role test now filters it). A category is auto-escalated to Claude grading at &ge;2 OPEN. Currently escalated: <b>none - the rules are keeping up</b>.</p><table><tr><th>status</th><th>ticker</th><th>date</th><th>category</th><th>role</th><th>headline</th><th>why it's a false positive</th></tr><tr><td style='color:#a3be8c'>resolved</td><td>NVDA</td><td>2026-07-14</td><td>export ban or restriction</td><td>SUBJECT_VOLUNTARY</td><td>Nvidia Tightens Asian Customer Approvals as US Chip Export Controls Intensify</td><td class='dim'>NVDA tightening its OWN customer approvals - risk-reducing, not a restriction imposed on NVDA</td></tr><tr><td style='color:#a3be8c'>resolved</td><td>NVDA</td><td>2026-07-22</td><td>export ban or restriction</td><td>OBJECT_MENTIONED</td><td>White House accuses Moonshot of violating US export controls using Nvidia hardware</td><td class='dim'>Moonshot is the accused; NVDA hardware merely named. Blackwell China sales already banned; NVDA rose 3.35% on the day</td></tr></table><p><a href='/'>&larr; back</a></p>
 <p class="dim" style="margin-top:24px">Not financial advice - you decide and place the trade. Re-verify live price + FX at execution.</p>
@@ -71,7 +71,7 @@ function sentinelAgePhrase(h){
   if(h<48) return Math.floor(h)+" hours ago";
   return Math.floor(h/24)+" days ago";
 }
-var built="2026-10-30T23:44:01+00:00", limit=48.0;
+var built="2026-10-31T21:06:10+00:00", limit=48.0;
 var ms=Date.parse(built.indexOf("Z")<0&&built.indexOf("+")<0?built+"Z":built);
 if(isNaN(ms))return;
 var age=(Date.now()-ms)/3600000;
